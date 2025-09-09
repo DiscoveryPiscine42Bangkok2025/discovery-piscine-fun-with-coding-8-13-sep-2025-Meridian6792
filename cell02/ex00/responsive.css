@@ -1,0 +1,37 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    outline: 2px solid black;
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.box1 {
+    background-color: palegreen;
+}
+
+.box2 {
+    background-color: palevioletred;
+}
