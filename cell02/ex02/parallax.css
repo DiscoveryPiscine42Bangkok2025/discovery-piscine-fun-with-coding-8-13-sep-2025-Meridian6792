@@ -1,0 +1,68 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.parallax {
+  /* Full height */
+  height: 100vh;
+  
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Flexbox to center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax1 {
+  /* First image */
+  background-image: url("https://www.shutterstock.com/image-vector/chubby-cat-meme-sticker-cute-260nw-2519959469.jpg");
+}
+
+.parallax2 {
+  /* Second image */
+  background-image: url("https://ih1.redbubble.net/image.5430452497.4707/st,small,507x507-pad,600x600,f8f8f8.jpg");
+}
+
+.centered-message {
+  text-align: center;
+  color: black;
+  width: 80%;
+}
+
+.centered-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.centered-message p {
+  font-size: 1.5rem;
+}
+
+.black-block {
+  background-color: #000;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.message {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.message h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.message p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
