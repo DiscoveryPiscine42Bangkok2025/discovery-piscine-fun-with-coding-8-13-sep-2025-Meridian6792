@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-container {
+    text-align: center;
+}
+
+.dropdown-menu {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    min-width: 200px;
+}
+
+.dropdown-menu:focus {
+    outline: none;
+    border-color: #007bff;
+}
