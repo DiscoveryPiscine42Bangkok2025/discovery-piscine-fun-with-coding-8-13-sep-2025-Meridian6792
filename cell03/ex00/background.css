@@ -1,0 +1,23 @@
+/* Make button centered */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #555;
+}
