@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f4;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input, select {
+      padding: 8px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    input[type="submit"]:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="left" placeholder="Left number">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right number">
+    <input type="submit" id="tryMe" value="Try me!">
+  </div>
+
+
+  <script> //JS
+    const leftInput = document.getElementById("left");
+    const rightInput = document.getElementById("right");
+    const operator = document.getElementById("operator");
+    const button = document.getElementById("tryMe");
+
+    
+    button.addEventListener("click", () => {
+      const leftVal = leftInput.value.trim();
+      const rightVal = rightInput.value.trim();
+
+      
+      if (!/^\d+$/.test(leftVal) || !/^\d+$/.test(rightVal)) {
+        alert("Error :(");
+        return;
+      }
+
+      const left = parseInt(leftVal, 10);
+      const right = parseInt(rightVal, 10);
+      let result;
+
+      if ((operator.value === "/" || operator.value === "%") && right === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+
+      switch (operator.value) {
+        case "+": result = left + right; break;
+        case "-": result = left - right; break;
+        case "*": result = left * right; break;
+        case "/": result = left / right; break;
+        case "%": result = left % right; break;
+      }
+
+      alert("Result: " + result);
+      console.log("Result:", result);
+    });
+
+
+    setInterval(() => {
+
+      alert("Please, use me...");
+
+    }, 30000);
+  </script>
+</body>
+</html>
