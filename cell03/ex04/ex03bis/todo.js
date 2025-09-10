@@ -33,26 +33,39 @@ $(document).ready(function() {
     $("#ft_list .todo-item").each(function() {
       todos.push($(this).text());
     });
-    localStorage.setItem("todos", JSON.stringify(todos));
+    
+    const todosJSON = JSON.stringify(todos);
+    
+    const expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + 7);
+    document.cookie = `todos=${todosJSON}; expires=${expirationDate.toUTCString()}; path=/`;
   }
 
   function loadTodos() {
-    const todosJSON = localStorage.getItem("todos");
-    if (!todosJSON) {
-      return;
+    const cookies = document.cookie.split("; ");
+    let todosCookie = null;
+    
+    for (let cookie of cookies) {
+        if (cookie.startsWith("todos=")) {
+            todosCookie = cookie.substring(6);
+            break;
+        }
     }
-
+   
+    if (!todosCookie) {
+        return;
+    }
+    
     let todos;
     try {
-      todos = JSON.parse(todosJSON);
+        todos = JSON.parse(todosCookie);
     } catch (e) {
-      return;
+        return;
     }
-
-    // Prepend in reverse order to maintain original order in display (newest first)
+    
     for (let i = todos.length - 1; i >= 0; i--) {
-      const $div = createTodoElement(todos[i]);
-      $("#ft_list").prepend($div);
+        const $div = createTodoElement(todos[i]);
+        $("#ft_list").prepend($div);
     }
   }
 
