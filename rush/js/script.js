@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Function to set a cookie
+    // set cookie
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    // Function to get a cookie
+    // get cookie
     function getCookie(name) {
         const nameEQ = name + "=";
         const ca = document.cookie.split(';');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    // Apply saved theme on load
+    // Apply theme on load
     const savedTheme = getCookie('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-mode');
@@ -35,26 +35,26 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.textContent = 'Toggle Light Mode';
         }
     } else {
-        // Default to light mode (already handled by CSS defaults)
+        // Default to light mode
         if (themeToggle) {
             themeToggle.textContent = 'Toggle Dark Mode';
         }
     }
 
-    // Toggle theme on button click
+    // Toggle theme on click
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             if (body.classList.contains('dark-mode')) {
-                setCookie('theme', 'dark', 365); // Save dark mode for 365 days
+                setCookie('theme', 'dark', 7);
                 themeToggle.textContent = 'Toggle Light Mode';
             } else {
-                setCookie('theme', 'light', 365); // Save light mode for 365 days
+                setCookie('theme', 'light', 7);
                 themeToggle.textContent = 'Toggle Dark Mode';
             }
         });
     }
-    // Tab switching logic for profile pages
+    // Tab switching
     const mainElement = document.querySelector('main');
     if (mainElement && mainElement.classList.contains('profile-container')) {
         const tabButtons = document.querySelectorAll('.tab-button');
@@ -62,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Deactivate current active tab and content
+                // Deactivate current tab
                 document.querySelector('.tab-button.active')?.classList.remove('active');
                 document.querySelector('.tab-content.active')?.classList.remove('active');
 
-                // Activate clicked tab and content
+                // Activate new tab
                 button.classList.add('active');
                 const targetTab = button.dataset.tab;
                 document.getElementById(`${targetTab}-content`).classList.add('active');
