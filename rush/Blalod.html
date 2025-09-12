@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blalod — Bannasorn Lalod</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-14 w-full">
+      
+      <button class="home-button">
+        <a href="index.html">← Home</a>
+      </button>
+      <div class="central-nav-buttons">
+        <button class="tab-button active" data-tab="about">About Me</button>
+        <button class="tab-button" data-tab="showcase">Showcase</button>
+        <button class="tab-button" data-tab="contact">Contact</button>
+      </div>
+      <button id="theme-toggle" class="themed-button">Toggle Dark Mode</button>
+    </div>
+  </div>
+</nav>
+<div class="pt-14"></div>
+
+<body class="min-h-screen flex flex-col theme-blalod">
+
+  <header class="flex flex-col items-center justify-center text-center h-[55vh] sm:h-[60vh] px-4">
+    <img
+      src="https://scontent.fbkk28-1.fna.fbcdn.net/v/t39.30808-1/448807404_3657703291212168_4589023466587013234_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e99d92&_nc_eui2=AeGljodFvTJvKv-ElmHXqQrLhYndXeaus5-Fid1d5q6znzbbVTsMNcVd88uZLoJPbg2aLVYW0fVM-qUzRqvsjMep&_nc_ohc=SgSSJYhIQUMQ7kNvwGV_5ol&_nc_oc=AdkKnKXBrHSLhlj6v5Kwegia4e0TO3DF9brV5FTVeOSKM_mYREeFuLyxm45v8z0eHAM&_nc_zt=24&_nc_ht=scontent.fbkk28-1.fna&_nc_gid=pAXXKG7tcnVFh_rYsS8bow&oh=00_AfYKFVRZ7g8Bc1abaLDZzmeHps79ef84Ee15DSghCdo-nA&oe=68C9B67E"
+      alt="Profile"
+      class="profile-picture shadow-lg mb-4"
+    />
+    <h1 class="text-5xl font-extrabold mb-2">Bannasorn Lalod</h1>
+    <p class="text-xl opacity-90">Software Development • Cyber Security • Engineering</p>
+    
+  </header>
+
+  <main class="profile-container rounded-t-3xl -mt-8 sm:-mt-10 mx-4 sm:mx-8 shadow-lg">
+    <div id="about-content" class="tab-content active scroll-mt-14 p-6 sm:p-10">
+      <h2 class="text-2xl font-bold border-l-4 border-amber-600 pl-3 mb-4">About Me</h2>
+      <p class="text-slate-700 mb-4">
+        I’m a Computer Engineering student interested in software/game development.<br> 
+        I am also interested in a career in Cyber Security
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><span class="font-semibold">Focus:</span> Python, C#, C Programming</li>
+        <li><span class="font-semibold">Tools:</span> HTML, CSS, and JavaScript (very basics)</li>
+        <li><span class="font-semibold">Interests:</span> Game Development and Cyber Security</li>
+      </ul>
+    </div>
+
+    <div id="showcase-content" class="tab-content scroll-mt-14 p-6 sm:p-10 border-t">
+      <h2 class="text-2xl font-bold border-l-4 border-amber-600 pl-3 mb-6">Showcase</h2>
+
+      <div class="grid md::grid-cols-2 gap-6">
+
+        <div class="p-5 rounded-xl border shadow-sm">
+          <h3 class="text-xl font-semibold mb-3">GPA</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><span class="font-semibold">Year 1 Semester 1:</span> 3.00 GPA</li>
+            <li><span class="font-semibold">Year 1 Semester 2:</span> 2.67 GPA</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl border shadow-sm">
+          <h3 class="text-xl font-semibold mb-3">Experiences</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>C Programming Laboratory</li>
+            <li>Arduino Circuit and Programming Laboratory</li>
+            <li>Basic Circuits Laboratory</li>
+            <li>Object Oriented Programming Laboratory</li>
+            <li>Digital Systems Laboratory</li>
+            <li>Object Oriented Data Structure Laboratory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-content" class="tab-content p-6 sm:p-10 text-center">
+      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://www.facebook.com/bannasorn.lalod.1" class="contact-link" rel="noopener">
+          <img src="logos/facebook.png" alt="Facebook" class="contact-icon" />
+        </a>
+        <a href="https://www.instagram.com/bns_lld/" class="contact-link" rel="noopener">
+          <img src="logos/instagram.png" alt="Instagram" class="contact-icon" />
+        </a>
+        <a href="https://github.com/Meridian6792" class="contact-link" rel="noopener">
+          <img src="logos/github.png" alt="GitHub" class="contact-icon" />
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-6 text-center text-sm text-white/80 mt-auto">
+    © 2025 Bannasorn Lalod
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

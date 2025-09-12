@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Busawang — Bunyapon Sawangroj</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between h-14 w-full">
+      <button class="home-button">
+        <a href="index.html">← Home</a>
+      </button>
+      <div class="central-nav-buttons">
+        <button class="tab-button active" data-tab="about">About Me</button>
+        <button class="tab-button" data-tab="showcase">Showcase</button>
+        <button class="tab-button" data-tab="contact">Contact</button>
+      </div>
+      <button id="theme-toggle" class="themed-button">Toggle Dark Mode</button>
+    </div>
+  </div>
+</nav>
+<div class="pt-14"></div>
+
+<body class="min-h-screen flex flex-col theme-busawang">
+
+  <header class="flex flex-col items-center justify-center text-center h-[55vh] sm:h-[60vh] px-4">
+    <img
+      src="https://images.pexels.com/photos/20787/pexels-photo.jpg"
+      alt="Profile"
+      class="profile-picture shadow-lg mb-4"
+    />
+    <h1 class="text-5xl font-extrabold mb-2">Bunyapon Sawangroj</h1>
+    <p class="text-xl opacity-90">Industrial Chemistry • Petroleum • Sustainable Energy</p>
+  </header>
+
+  <main class="profile-container rounded-t-3xl -mt-8 sm:-mt-10 mx-4 sm:mx-8 shadow-lg">
+
+    <div id="about-content" class="tab-content active scroll-mt-14 p-6 sm:p-10">
+      <h2 class="text-2xl font-bold border-l-4 border-amber-600 pl-3 mb-4">About Me</h2>
+      <p class="text-slate-700 mb-4">
+        I’m an Industrial Chemistry student interested in sustainable energy and petroleum research.
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><span class="font-semibold">Focus:</span> Sustainable energy and petroleum processes</li>
+        <li><span class="font-semibold">Tools:</span> HTML, CSS, and JavaScript (very basics)</li>
+        <li><span class="font-semibold">Interests:</span> Analytical Chemistry and Instrumentation</li>
+      </ul>
+    </div>
+
+    <div id="showcase-content" class="tab-content scroll-mt-14 p-6 sm:p-10 border-t">
+      <h2 class="text-2xl font-bold border-l-4 border-amber-600 pl-3 mb-6">Showcase</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-5 rounded-xl border shadow-sm">
+          <h3 class="text-xl font-semibold mb-3">GPA</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><span class="font-semibold">Year 1 Semester 1:</span> 4.00 GPA</li>
+            <li><span class="font-semibold">Year 1 Semester 2:</span> 3.88 GPA</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-xl border shadow-sm">
+          <h3 class="text-xl font-semibold mb-3">Laboratory Experience</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>General Chemistry Laboratory</li>
+            <li>Organic Chemistry Laboratory</li>
+            <li>Inorganic Chemistry Laboratory</li>
+            <li>Physical Chemistry Laboratory</li>
+            <li>Analytical Chemistry Laboratory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-content" class="tab-content p-6 sm:p-10 text-center">
+      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <a href="https://www.facebook.com/3.14285714286circle" class="contact-link" rel="noopener">
+          <img src="logos/facebook.png" alt="Facebook" class="contact-icon" />
+        </a>
+        <a href="https://www.instagram.com/timorous86/" class="contact-link" rel="noopener">
+          <img src="logos/instagram.png" alt="Instagram" class="contact-icon" />
+        </a>
+        <a href="https://github.com/67050297-Busawang" class="contact-link" rel="noopener">
+          <img src="logos/github.png" alt="GitHub" class="contact-icon" />
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-6 text-center text-sm text-white/80 mt-auto">
+    © 2025 Bunyapon Sawangroj
+  </footer>
+<script src="js/script.js"></script>
+</body>
+</html>

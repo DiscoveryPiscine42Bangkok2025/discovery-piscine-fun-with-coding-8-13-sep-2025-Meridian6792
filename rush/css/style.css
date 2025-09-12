@@ -1,0 +1,552 @@
+:root {
+  /* Base Light Theme */
+  --color-background-light: #ffffff;
+  --color-text-light: #000000;
+  --color-header-bg-light: #ffffff;
+  --color-header-text-light: #333;
+  --color-main-bg-light: #f4f4f4;
+  --color-section-bg-light: #fff;
+  --color-link-light: #007bff;
+  --color-link-hover-light: #0056b3;
+  --color-home-button-bg-light: #a0a0a0;
+  --color-home-button-hover-light: #d4d4d4;
+  --color-home-button-text-light: #000000;
+  --color-tab-button-text-light: #555;
+  --color-tab-button-hover-light: #ddd;
+  --color-tab-button-active-bg-light: #fff;
+  --color-tab-button-active-text-light: #007bff;
+  --color-tab-content-bg-light: #f4f4f4;
+  --color-border-color-light: #e0d9d6;
+
+  /* Base Dark Theme (when body.dark-mode is active) */
+  --color-background-dark: #222;
+  --color-text-dark: #e0e0e0;
+  --color-header-bg-dark: #111;
+  --color-header-text-dark: #e0e0e0;
+  --color-main-bg-dark: #222;
+  --color-section-bg-dark: #222;
+  --color-link-dark: #00bfff;
+  --color-link-hover-dark: #0099e6;
+  --color-home-button-bg-dark: #2e2e2e;
+  --color-home-button-hover-dark: #8d8d8d;
+  --color-home-button-text-dark: #ffffff;
+  --color-tab-button-text-dark: #e0e0e0;
+  --color-tab-button-hover-dark: #555;
+  --color-tab-button-active-bg-dark: #222;
+  --color-tab-button-active-text-dark: #00bfff;
+  --color-tab-content-bg-dark: #222;
+  --color-border-color-dark: #444;
+
+  /* Global variables, defaulting to light theme */
+  --primary-bg: var(--color-background-light);
+  --text-color: var(--color-text-light);
+  --header-bg: var(--color-header-bg-light);
+  --header-text: var(--color-header-text-light);
+  --main-bg: var(--color-main-bg-light);
+  --section-bg: var(--color-section-bg-light);
+  --link-color: var(--color-link-light);
+  --link-hover-color: var(--color-link-hover-light);
+  --home-button-bg: var(--color-home-button-bg-light);
+  --home-button-hover-bg: var(--color-home-button-hover-light);
+  --home-button-text: var(--color-home-button-text-light);
+  --tab-button-text: var(--color-tab-button-text-light);
+  --tab-button-hover-bg: var(--color-tab-button-hover-light);
+  --tab-button-active-bg: var(--color-tab-button-active-bg-light);
+  --tab-button-active-text: var(--color-tab-button-active-text-light);
+  --tab-content-bg: var(--color-tab-content-bg-light);
+  --border-color: var(--color-border-color-light);
+}
+
+body.dark-mode {
+  --primary-bg: var(--color-background-dark);
+  --text-color: var(--color-text-dark);
+  --header-bg: var(--color-header-bg-dark);
+  --header-text: var(--color-header-text-dark);
+  --main-bg: var(--color-main-bg-dark);
+  --section-bg: var(--color-section-bg-dark);
+  --link-color: var(--color-link-dark);
+  --link-hover-color: var(--color-link-hover-dark);
+  --home-button-bg: var(--color-home-button-bg-dark);
+  --home-button-hover-bg: var(--color-home-button-hover-dark);
+  --tab-button-text: var(--color-tab-button-text-dark);
+  --tab-button-hover-bg: var(--color-tab-button-hover-dark);
+  --tab-button-active-bg: var(--color-tab-button-active-bg-dark);
+  --tab-button-active-text: var(--color-tab-button-active-text-dark);
+  --tab-content-bg: var(--color-tab-content-bg-dark);
+  --border-color: var(--color-border-color-dark);
+  --home-button-text: var(--color-home-button-text-dark);
+}
+
+/* Blalod's Theme (subtle warm tones) */
+body.theme-blalod {
+  --primary-bg: #fdf6f3; /* Warm off-white */
+  --text-color: #4a4a4a; /* Soft dark grey */
+  --header-bg: #fae0d1; /* Light peach */
+  --header-text: #5c3c2e; /* Darker warm brown */
+  --main-bg: #fdf6f3;
+  --section-bg: #fffbf9; /* Lighter section background */
+  --link-color: #e67d71; /* Desaturated coral */
+  --link-hover-color: #d16b60;
+  --home-button-bg: #e67d71;
+  --home-button-hover-bg: #d16b60;
+  --home-button-text: #fff;
+  --tab-button-text: #6b6b6b;
+  --tab-button-hover-bg: #f5ece8;
+  --tab-button-active-bg: #fffbf9;
+  --tab-button-active-text: #e67d71;
+  --tab-content-bg: #fdf6f3;
+  --border-color: #e0d9d6;
+
+  /* Dark mode for Blalod's theme (adapted from warm tones) */
+  &.dark-mode {
+    --primary-bg: #3f3532; /* Darker warm grey */
+    --text-color: #e8dcd9;
+    --header-bg: #2d2624;
+    --header-text: #fdf6f3;
+    --main-bg: #3f3532;
+    --section-bg: #4a403d;
+    --link-color: #f09e93; /* Lighter coral */
+    --link-hover-color: #e88b80;
+    --home-button-bg: #f09e93;
+    --home-button-hover-bg: #e88b80;
+    --home-button-text: #ffe;
+    --tab-button-text: #e8dcd9;
+    --tab-button-hover-bg: #5f504d;
+    --tab-button-active-bg: #4a403d;
+    --tab-button-active-text: #f09e93;
+    --tab-content-bg: #3f3532;
+    --border-color: #5c524f;
+  }
+}
+
+/* Busawang's Theme (subtle cool tones) */
+body.theme-busawang {
+  --primary-bg: #f3f7f8; /* Cool off-white */
+  --text-color: #444444; /* Slightly cool dark grey */
+  --header-bg: #dbeaf0; /* Light cool blue */
+  --header-text: #324a5c; /* Darker cool blue */
+  --main-bg: #f3f7f8;
+  --section-bg: #fbfdff; /* Lighter section background */
+  --link-color: #6a9caf; /* Muted teal */
+  --link-hover-color: #5e8f9e;
+  --home-button-bg: #6a9caf;
+  --home-button-hover-bg: #5e8f9e;
+  --home-button-text: #fff;
+  --tab-button-text: #606060;
+  --tab-button-hover-bg: #e6eff2;
+  --tab-button-active-bg: #fbfdff;
+  --tab-button-active-text: #6a9caf;
+  --tab-content-bg: #f3f7f8;
+  --border-color: #d8e2e6;
+
+  /* Dark mode for Busawang's theme (adapted from cool tones) */
+  &.dark-mode {
+    --primary-bg: #323a3d; /* Darker cool grey */
+    --text-color: #deeaf0;
+    --header-bg: #242b2e;
+    --header-text: #f3f7f8;
+    --main-bg: #323a3d;
+    --section-bg: #3d4a4d;
+    --link-color: #8fbacb; /* Lighter teal */
+    --link-hover-color: #7ba3b4;
+    --home-button-bg: #8fbacb;
+    --home-button-hover-bg: #7ba3b4;
+    --home-button-text: #eff;
+    --tab-button-text: #deeaf0;
+    --tab-button-hover-bg: #515e61;
+    --tab-button-active-bg: #3d4a4d;
+    --tab-button-active-text: #8fbacb;
+    --tab-content-bg: #323a3d;
+    --border-color: #505c60;
+  }
+}
+
+@layer base {
+    html, body {
+        height: 100%; /* Ensure html and body take full viewport height */
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex; /* Make body a flex container */
+        flex-direction: column; /* Stack children vertically */
+        background-color: var(--primary-bg); /* Use CSS variable */
+        color: var(--text-color); /* Use CSS variable */
+        line-height: 1.6;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    }
+
+    /* body.dark-mode is handled by overriding variables in :root */
+
+}
+
+@layer components {
+    header {
+        background: var(--header-bg); /* Use CSS variable */
+        color: var(--header-text); /* Use CSS variable */
+        padding: 1rem 0;
+        text-align: center;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    }
+
+    /* body.dark-mode header ishandled by variables */
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .welcome-container {
+        display: flex;
+        flex-direction: row; /* Arrange buttons horizontally */
+        width: 100%; /* Take full width of parent */
+        height: 100%; /* Take full height of parent */
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .welcome-button {
+        flex: 1; /* Take equal width */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .welcome-button a {
+        color: white;
+        text-decoration: none;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        display: flex; /* Make the anchor a flex container */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        width: 100%; /* Take full width of parent */
+        height: 100%; /* Take full height of parent */
+    }
+
+    .blue-button {
+        background: linear-gradient(to right, #7ba3b4, #7ba3b4); /* Darker blue for light mode */
+    }
+
+    body.dark-mode .blue-button {
+        background: linear-gradient(to right, #7ba3b4, #7ba3b4); /* Original blue for dark mode */
+    }
+
+    .amber-button {
+        background: linear-gradient(to right, #b15b51, #b15b51); /* Darker amber for light mode */
+    }
+
+    body.dark-mode .amber-button {
+        background: linear-gradient(to right, #b15b51, #b15b51); /* Original amber for dark mode */
+    }
+
+    .welcome-button:hover {
+        flex: 1.2; /* Expand slightly on hover */
+    }
+
+    .blue-button:hover {
+        background: linear-gradient(to right, #92c9e0, #92c9e0);
+    }
+
+    .amber-button:hover {
+        background: linear-gradient(to right, #f09e93, #f09e93);
+    }
+
+    body.dark-mode .blue-button:hover {
+        background: linear-gradient(to right, #92c9e0, #92c9e0); /* Darker blue for dark mode hover */
+    }
+
+    body.dark-mode .amber-button:hover {
+        background: linear-gradient(to right, #f09e93, #f09e93); /* Darker amber for dark mode hover */
+    }
+
+    main {
+        flex-grow: 1; /* Allow main to grow and take available space */
+        padding: 0; /* Remove padding */
+        background-color: var(--main-bg); /* Use CSS variable */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    }
+    
+    /* body.dark-mode main is handled by variables */
+
+    /* Removed specific dark mode section styles, variables handle it */
+
+    .section {
+        background: var(--section-bg); /* Use CSS variable */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: none;
+        text-align: center;
+        flex: 1;
+        min-width: 280px;
+        max-width: 400px;
+    }
+
+    body.dark-mode .section {
+        background-color: var(--section-bg);
+        color: var(--text-color);
+        box-shadow: none;
+    }
+
+    .section:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important; /* Force shadow for hover */
+    }
+
+    body.dark-mode .section:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7) !important; /* Force shadow for hover */
+    }
+
+    .section a {
+        text-decoration: none;
+        color: var(--link-color); /* Use CSS variable */
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    /* body.dark-mode .section a is handled by variables */
+
+    .section a:hover {
+        color: var(--link-hover-color); /* Use CSS variable */
+    }
+
+    /* body.dark-mode .section a:hover is handled by variables */
+
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+        background: var(--header-bg); /* Using header-bg for consistency */
+        color: var(--header-text); /* Using header-text for consistency */
+        margin-top: auto;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    }
+
+    /* body.dark-mode footer is handled by variables */
+
+    .profile-picture {
+        width: 8rem; /* Equivalent to w-32 (1rem = 16px, so 8rem = 128px) */
+        height: 8rem; /* Equivalent to h-32 */
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    body.dark-mode .profile-picture {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1200px; /* Optional: adjust as needed */
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important; /* Re-add light shadow for definition */
+        overflow: hidden;
+        background-color: var(--primary-bg);
+    }
+
+    body.dark-mode .profile-container {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+        background-color: var(--primary-bg);
+    }
+
+    .home-button {
+        padding: 0.5rem 1rem;
+        background-color: var(--home-button-bg); /* Use CSS variable */
+        color: var(--home-button-text);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+    }
+
+    .home-button a {
+        color: inherit; /* Inherit color from button */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .home-button:hover {
+        background-color: var(--home-button-hover-bg); /* Use CSS variable */
+    }
+
+    /* body.dark-mode .home-button is handled by variables */
+
+    .themed-button {
+        padding: 0.5rem 1rem;
+        background-color: var(--home-button-bg);
+        color: var(--home-button-text);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Add transition */
+    }
+
+    .themed-button:hover {
+        background-color: var(--home-button-hover-bg);
+    }
+
+    .themed-button:hover {
+        background-color: var(--home-button-hover-bg);
+    }
+
+    /* body.dark-mode .themed-button is handled by variables */
+
+    .central-nav-buttons {
+        display: flex;
+        justify-content: center;
+        flex: 1; /* Allow it to grow and take available space */
+    }
+
+    nav.fixed {
+        background-color: var(--section-bg); /* Use section-bg for nav background */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode nav.fixed {
+        background-color: var(--section-bg);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .tab-buttons {
+        display: flex;
+        justify-content: center;
+        background-color: transparent; /* Changed */
+        border-bottom: none;
+    }
+
+    .tab-button {
+        padding: 1rem 1.5rem;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--tab-button-text); /* Use CSS variable */
+        transition: all 0.3s ease;
+    }
+
+    .tab-button:hover {
+        background-color: var(--tab-button-hover-bg); /* Use CSS variable */
+    }
+
+    .tab-button.active {
+        background-color: var(--tab-button-active-bg); /* Use CSS variable */
+        color: var(--tab-button-active-text); /* Use CSS variable */
+        border-bottom: none;
+    }
+
+    .tab-content {
+        display: none;
+        padding: 2.5rem; /* Increased padding */
+        min-height: 400px; /* Added a minimum height */
+        background-color: var(--tab-content-bg); /* Use CSS variable */
+        opacity: 0; /* Start hidden */
+        max-height: 0; /* Start with no height for transition */
+        overflow: hidden; /* Hide overflowing content during height transition */
+        transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out, background-color 0.3s ease; /* Add transitions */
+    }
+
+    .tab-content.active {
+        display: block;
+        opacity: 1; /* Fade in */
+        max-height: 1000px; /* Animate to a large enough height, adjust if content can be taller */
+    }
+
+    body.dark-mode .profile-container {
+        background-color: var(--primary-bg);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    body.dark-mode .tab-buttons {
+        background-color: var(--primary-bg);
+        border-bottom: none;
+    }
+
+    body.dark-mode .tab-button {
+        color: var(--tab-button-text);
+    }
+
+    body.dark-mode .tab-button:hover {
+        background-color: var(--tab-button-hover-bg);
+    }
+
+    body.dark-mode .tab-button.active {
+        background-color: var(--tab-button-active-bg);
+        color: var(--tab-button-active-text);
+        border-bottom: none;
+    }
+    
+    body.dark-mode .tab-content {
+        background-color: var(--tab-content-bg);
+    }
+
+    /* Tailwind-like classes for dynamic values */
+    .border-amber-600 {
+      border-color: var(--link-color) !important; /* Use link color for emphasis */
+    }
+    
+    .text-amber-600 {
+      color: var(--link-color) !important; /* Use link color for emphasis */
+    }
+    
+    .text-blue-600 {
+     color: var(--link-color) !important; /* Use link color for emphasis */
+    }
+    
+    .text-slate-700 {
+      color: var(--text-color) !important;
+    }
+    
+    .text-slate-900 {
+      color: var(--link-color) !important; /* Use link color for GitHub link */
+    }
+    
+    .p-5.rounded-xl.border.shadow-sm {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+      border-color: var(--border-color);
+    }
+    
+    body.dark-mode .p-5.rounded-xl.border.shadow-sm {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    }
+}
+/* Contact Icons Styling */
+.contact-link {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 50%; /* Make them circular */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  background-color: var(--tab-button-hover-bg); /* Use a subtle hover background */
+}
+
+.contact-icon {
+  width: 48px;
+    height: 48px;
+  vertical-align: middle;
+}
